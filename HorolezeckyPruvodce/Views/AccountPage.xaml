@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.AccountPage"
+             Title="{extensions:Translate AccountPage_Title}">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="AccountInfoLabelStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDarkColor}"/>
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView x:Name="RootScrollView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout IsVisible="{Binding UserNotLoggedId}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Label Margin="10,30,10,10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Text="{extensions:Translate AccountPage_NoUser}"/>
+                <Label Margin="10,0" Text="{extensions:Translate AccountPage_UserName}" FontAttributes="Bold"/>
+                <Entry Margin="10,0" Text="{Binding UserNameTextInput, Mode=TwoWay}" HorizontalOptions="FillAndExpand" />
+                <Button TextColor="White" BackgroundColor="{StaticResource PrimaryColor}" Text="{extensions:Translate AccountPage_CreateAccount}" HorizontalOptions="Center" Command="{Binding CreateAccountCommand}" />
+            </StackLayout>
+            <StackLayout IsVisible="{Binding UserLoggedId}" Spacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource IconsColor}" HeightRequest="{StaticResource SeparatorHeight}" />
+                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryColor}">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ExpandIcon_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" Margin="15,10" HorizontalOptions="StartAndExpand" VerticalOptions="Center" >
+                        <Label Text="{Binding UserName}" FontSize="{StaticResource ListFontSize}" TextColor="White"/>
+                    </StackLayout>
+                    <Image Margin="15,10" x:Name="ExpandIcon" VerticalOptions="Center" HorizontalOptions="End" Aspect="AspectFit" Source="ic_expand_more.png"/>
+                </StackLayout>
+                <Grid x:Name="DetailLayout" Margin="0" Padding="0" RowSpacing="0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" IsVisible="{Binding Expanded}" BackgroundColor="{StaticResource PrimaryLightColor}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Margin="10" Text="{extensions:Translate AccountPage_NumberOfDiaryRoutes}" Grid.Row="0" Grid.Column="0" Style="{StaticResource AccountInfoLabelStyle}"/>
+                    <Label Margin="10" Text="{Binding NumberOfDiaryRoutes}" Grid.Row="0" Grid.Column="1" Style="{StaticResource AccountInfoLabelStyle}"/>
+
+                    <Label Margin="10,0,10,10" Text="{extensions:Translate AccountPage_AverageDifficulty}" Grid.Row="1" Grid.Column="0" Style="{StaticResource AccountInfoLabelStyle}"/>
+                    <Label Margin="10,0,10,10" Text="{Binding AverageDifficulty}" Grid.Row="1" Grid.Column="1" Style="{StaticResource AccountInfoLabelStyle}"/>
+                </Grid>
+                <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="{StaticResource SeparatorHeight}" />
+                <StackLayout x:Name="DiariesStackLayout" Spacing="0"/>
+            </StackLayout>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

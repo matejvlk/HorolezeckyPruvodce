@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.SearchPage"
+             Title="{extensions:Translate SearchPage_Title}">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <Label Margin="10,30,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Text="{extensions:Translate SearchPage_Info}"/>
+            <Entry Margin="10,0" Placeholder="{extensions:Translate SearchPage_Name}" Text="{Binding SearchTextInput, Mode=TwoWay}" HorizontalOptions="FillAndExpand" />
+            <Button TextColor="White" BackgroundColor="{StaticResource PrimaryColor}" Text="{extensions:Translate SearchPage_Search}" HorizontalOptions="Center" Command="{Binding SearchCommand}" />
+            <StackLayout x:Name="FoundItemsStackLayout" Spacing="0"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.AboutAppPage"
+             Title="{extensions:Translate AboutAppPage_Title}">
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Image Margin="0,30" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Source="logo.png"/>
+                <Label Margin="10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_University}" TextColor="{StaticResource PrimaryDarkColor}" FontAttributes="Bold" FontSize="17"/>
+                <Label Margin="10,5" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Faculty}" TextColor="{StaticResource PrimaryDarkColor}" FontAttributes="Bold" FontSize="17"/>
+                <Label Margin="10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Department}" TextColor="{StaticResource PrimaryDarkColor}" FontAttributes="Bold" FontSize="17"/>
+                <Label Margin="10,30,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Name}" TextColor="{StaticResource PrimaryDarkColor}" FontAttributes="Bold" FontSize="17"/>
+                <Label Margin="10,5" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Thesis}" TextColor="{StaticResource PrimaryDarkColor}" FontSize="17"/>
+                <Label Margin="10,20,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" Text="{extensions:Translate HomePage_Author}" TextColor="{StaticResource PrimaryDarkColor}" />
+                <Label Margin="10,5" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" Text="{extensions:Translate HomePage_FieldOfStudy}" TextColor="{StaticResource PrimaryDarkColor}" />
+                <Label Margin="10,20,10,10" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" Text="{extensions:Translate HomePage_Supervisor}" TextColor="{StaticResource PrimaryDarkColor}" />
+                <Label Margin="10,20,10,15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Start" Text="{extensions:Translate HomePage_Place}" TextColor="{StaticResource PrimaryDarkColor}" />
+
+                <Label Margin="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="{extensions:Translate AboutAppPage_AboutText}" TextColor="{StaticResource PrimaryDarkColor}"/>
+            </StackLayout>
+
+            <Label Margin="10,5" HorizontalOptions="CenterAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate AboutAppPage_Version}" />
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             xmlns:viewModels="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.ViewModels;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.LocationListPage"
+             Title="{extensions:Translate LocationListPage_Title}">
+    
+    <ContentPage.BindingContext>
+        <viewModels:LocationListViewModel/>
+    </ContentPage.BindingContext>
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView x:Name="LocationListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="True" SeparatorColor="{StaticResource PrimaryColor}" ItemsSource="{Binding Locations}" ItemSelected="Location_ItemSelected" ItemTapped="ListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="15">
+                            <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="{StaticResource ListFontSize}" TextColor="{StaticResource PrimaryColor}" />
+                            <Image VerticalOptions="Center" HorizontalOptions="End" Aspect="AspectFit" Source="ic_arrow_right.png"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

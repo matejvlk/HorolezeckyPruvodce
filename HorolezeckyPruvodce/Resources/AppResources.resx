@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AboutAppPage_Title" xml:space="preserve">
+    <value>O aplikaci</value>
+  </data>
+  <data name="AccountPage_CreateAccount" xml:space="preserve">
+    <value>Vytvořit uživatele</value>
+  </data>
+  <data name="AccountPage_NoUser" xml:space="preserve">
+    <value>Vypadá to, že ještě nemáte vytvořený účet. Napravte to pomocí formuláře níže a využijte tak všech možností aplikace.</value>
+  </data>
+  <data name="AccountPage_Title" xml:space="preserve">
+    <value>Účet</value>
+  </data>
+  <data name="AccountPage_UserName" xml:space="preserve">
+    <value>Uživatelské jméno</value>
+  </data>
+  <data name="AddDiaryPage_Date" xml:space="preserve">
+    <value>Datum přelezu</value>
+  </data>
+  <data name="AddDiaryPage_Feeling" xml:space="preserve">
+    <value>Hodnocení</value>
+  </data>
+  <data name="AddDiaryPage_Note" xml:space="preserve">
+    <value>Poznámka</value>
+  </data>
+  <data name="AddDiaryPage_NotSaved" xml:space="preserve">
+    <value>Cestu se nepodařilo uložit do deníčku.</value>
+  </data>
+  <data name="AddDiaryPage_Partner" xml:space="preserve">
+    <value>Spolulezec</value>
+  </data>
+  <data name="AddDiaryPage_Saved" xml:space="preserve">
+    <value>Cesta byla uložena do deníčku.</value>
+  </data>
+  <data name="AddDiaryPage_Style" xml:space="preserve">
+    <value>Styl přelezu</value>
+  </data>
+  <data name="AddDiaryPage_AddTitle" xml:space="preserve">
+    <value>Zapsat do deníčku</value>
+  </data>
+  <data name="AreaListPage_NoLocationInfo" xml:space="preserve">
+    <value>K této poloze nebyl zadán žádný popis.</value>
+  </data>
+  <data name="AreaListPage_Title" xml:space="preserve">
+    <value>Oblasti</value>
+  </data>
+  <data name="HomePage_AboutApp" xml:space="preserve">
+    <value>O APLIKACI</value>
+  </data>
+  <data name="HomePage_Account" xml:space="preserve">
+    <value>ÚČET</value>
+  </data>
+  <data name="HomePage_Guide" xml:space="preserve">
+    <value>PRŮVODCE</value>
+  </data>
+  <data name="HomePage_Search" xml:space="preserve">
+    <value>HLEDÁNÍ</value>
+  </data>
+  <data name="HomePage_Title" xml:space="preserve">
+    <value>HOROLEZECKÝ PRŮVODCE</value>
+  </data>
+  <data name="LocationListPage_Title" xml:space="preserve">
+    <value>Polohy</value>
+  </data>
+  <data name="RouteDetailPage_Angle" xml:space="preserve">
+    <value>Sklon</value>
+  </data>
+  <data name="RouteDetailPage_Author" xml:space="preserve">
+    <value>Autor</value>
+  </data>
+  <data name="RouteDetailPage_Description" xml:space="preserve">
+    <value>Popis</value>
+  </data>
+  <data name="RouteDetailPage_Difficulties" xml:space="preserve">
+    <value>Obtíže</value>
+  </data>
+  <data name="RouteDetailPage_Grade" xml:space="preserve">
+    <value>Klasifikace</value>
+  </data>
+  <data name="RouteDetailPage_Length" xml:space="preserve">
+    <value>Délka</value>
+  </data>
+  <data name="RouteDetailPage_Note" xml:space="preserve">
+    <value>Poznámka</value>
+  </data>
+  <data name="RouteDetailPage_Protection" xml:space="preserve">
+    <value>Jištění</value>
+  </data>
+  <data name="RouteDetailPage_RockType" xml:space="preserve">
+    <value>Hornina</value>
+  </data>
+  <data name="RouteDetailPage_Sector" xml:space="preserve">
+    <value>Umístění</value>
+  </data>
+  <data name="RouteDetailPage_Type" xml:space="preserve">
+    <value>Typ cesty</value>
+  </data>
+  <data name="RouteDetailPage_UnknownAuthor" xml:space="preserve">
+    <value>neznámý</value>
+  </data>
+  <data name="RouteListPage_NoSectorInfo" xml:space="preserve">
+    <value>K tomuto sektoru nebyl zadán žádný popis.</value>
+  </data>
+  <data name="RouteListPage_Title" xml:space="preserve">
+    <value>Cesty</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Uložit</value>
+  </data>
+  <data name="SearchPage_Title" xml:space="preserve">
+    <value>Hledání</value>
+  </data>
+  <data name="SectorListPage_NoAreaInfo" xml:space="preserve">
+    <value>K této oblasti nebyl zadán žádný popis.</value>
+  </data>
+  <data name="SectorListPage_Title" xml:space="preserve">
+    <value>Sektory</value>
+  </data>
+  <data name="AccountPage_AverageDifficulty" xml:space="preserve">
+    <value>Průměrná obtížnost:</value>
+  </data>
+  <data name="AccountPage_NumberOfDiaryRoutes" xml:space="preserve">
+    <value>Počet cest v deníčku:</value>
+  </data>
+  <data name="AccountPage_UserCreated" xml:space="preserve">
+    <value>Účet vytvořen</value>
+  </data>
+  <data name="GradingSystem_French" xml:space="preserve">
+    <value>Francouzská</value>
+  </data>
+  <data name="GradingSystem_Jizerska" xml:space="preserve">
+    <value>Jizerská</value>
+  </data>
+  <data name="GradingSystem_Other" xml:space="preserve">
+    <value>Jiná</value>
+  </data>
+  <data name="GradingSystem_Saxon" xml:space="preserve">
+    <value>Saská pískovcová</value>
+  </data>
+  <data name="GradingSystem_UIAA" xml:space="preserve">
+    <value>UIAA</value>
+  </data>
+  <data name="GradingSystem_USA" xml:space="preserve">
+    <value>USA</value>
+  </data>
+  <data name="RouteDetailPage_GradingSystem" xml:space="preserve">
+    <value>Stupnice obtížnosti</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>Neznámá</value>
+  </data>
+  <data name="AccountPage_NumberOfRoutes" xml:space="preserve">
+    <value>cest:</value>
+  </data>
+  <data name="SearchPage_FoundAreasTitle" xml:space="preserve">
+    <value>Nalezené oblasti</value>
+  </data>
+  <data name="SearchPage_FoundLocationsTitle" xml:space="preserve">
+    <value>Nalezené polohy</value>
+  </data>
+  <data name="SearchPage_FoundRoutesTitle" xml:space="preserve">
+    <value>Nalezené cesty</value>
+  </data>
+  <data name="SearchPage_FoundSectorsTitle" xml:space="preserve">
+    <value>Nalezené sektory</value>
+  </data>
+  <data name="SearchPage_Info" xml:space="preserve">
+    <value>Zadejte název hledaného objektu.</value>
+  </data>
+  <data name="SearchPage_MinLength" xml:space="preserve">
+    <value>Hledaná fráze musí mít minimálně 2 znaky.</value>
+  </data>
+  <data name="SearchPage_Name" xml:space="preserve">
+    <value>Název</value>
+  </data>
+  <data name="SearchPage_Search" xml:space="preserve">
+    <value>Najít</value>
+  </data>
+  <data name="AboutAppPage_AboutText" xml:space="preserve">
+    <value>Aplikace obsahuje kompletní informace o oblíbené horolezecké oblasti Obrvégry a několik testovacích dat z dalších oblastí pro demonstraci kompletní funkčnosti aplikace.
+Informace jsou uspořádány podle geologické polohy, lezeckých oblastí a jim náležících sektorů. U každé horolezecké cesty je uvedena celá řada popisujících parametrů, jako je např. obtížnost, autor, charakter, způsob jištění, slovní popis či nákres. Uživatel má možnost data hierarchicky procházet nebo v nich vyhledávat. Přelezené cesty je možné spravovat v přehledném deníčku, který o nich nabízí i některé statistické údaje.</value>
+  </data>
+  <data name="AboutAppPage_Version" xml:space="preserve">
+    <value>Verze: 1.0</value>
+  </data>
+  <data name="AddDiaryPage_EditTitle" xml:space="preserve">
+    <value>Upravit záznam v deníčku</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Zrušit</value>
+  </data>
+  <data name="DiaryDeleteDialog_Message" xml:space="preserve">
+    <value>Opravdu chcete smazat cestu z deníčku?</value>
+  </data>
+  <data name="DiaryDeleteDialog_Title" xml:space="preserve">
+    <value>Smazat cestu</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="HomePage_Author" xml:space="preserve">
+    <value>Autor: Matěj Vlk</value>
+  </data>
+  <data name="HomePage_Department" xml:space="preserve">
+    <value>Katedra informatiky a kvantitativních metod</value>
+  </data>
+  <data name="HomePage_Faculty" xml:space="preserve">
+    <value>Fakulta informatiky a managementu</value>
+  </data>
+  <data name="HomePage_FieldOfStudy" xml:space="preserve">
+    <value>Studijní obor: Aplikovaná informatika</value>
+  </data>
+  <data name="HomePage_Name" xml:space="preserve">
+    <value>Horolezecký průvodce pro Android</value>
+  </data>
+  <data name="HomePage_Place" xml:space="preserve">
+    <value>Hradec Králové, 2017</value>
+  </data>
+  <data name="HomePage_Supervisor" xml:space="preserve">
+    <value>Vedoucí práce: doc. Ing. Filip Malý, Ph.D.</value>
+  </data>
+  <data name="HomePage_Thesis" xml:space="preserve">
+    <value>Bakalářská práce</value>
+  </data>
+  <data name="HomePage_University" xml:space="preserve">
+    <value>Univerzita Hradec Králové</value>
+  </data>
+</root>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             xmlns:tools="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Tools;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.AddDiaryPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="DataLabelStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0,14,10,4"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDarkColor}"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
+            <Style TargetType="Label" x:Key="TitleLabelStyle" BasedOn="{StaticResource DataLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="10,14,10,4"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand" Margin="0,0,0,0">
+            <StackLayout Padding="10">
+                <Label Text="{Binding RouteName}" TextColor="{StaticResource PrimaryColor}" FontSize="17" FontAttributes="Bold" Margin="10,0" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+                <Grid Margin="0" Padding="0" RowSpacing="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <Label Text="{extensions:Translate RouteDetailPage_Grade}" Grid.Row="0" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                    <Label Text="{Binding Grade}" Grid.Row="0" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                    <Label Text="{extensions:Translate RouteDetailPage_GradingSystem}" Grid.Row="1" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                    <Label Text="{Binding GradingSystem}" Grid.Row="1" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                    <Label Text="{extensions:Translate RouteDetailPage_Sector}" Grid.Row="2" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                    <Label Text="{Binding SectorName}" Grid.Row="2" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+                </Grid>
+                <BoxView HeightRequest="{StaticResource SeparatorHeight}" Color="{StaticResource PrimaryColor}" />
+
+                <!--datum-->
+                <Label Margin="10,10,10,0" Text="{extensions:Translate AddDiaryPage_Date}" Style="{StaticResource TitleLabelStyle}" />
+                <DatePicker Margin="10,0" x:Name="DatePicker" VerticalOptions="CenterAndExpand" >
+                    <DatePicker.Format>dd. MM. yyyy</DatePicker.Format>
+                </DatePicker>
+
+                <!--styl-->
+                <Label Margin="10,10,10,0" Text="{extensions:Translate AddDiaryPage_Style}" Style="{StaticResource TitleLabelStyle}" />
+                <Picker Margin="10,0" x:Name="StylePicker" HorizontalOptions="FillAndExpand" SelectedIndex="{Binding SelectedStyleIndex, Mode=TwoWay}"/>
+
+                <!--pocit (1-10)-->
+                <Label Margin="10,10,10,0" Text="{extensions:Translate AddDiaryPage_Feeling}" Style="{StaticResource TitleLabelStyle}" />
+                <StackLayout Margin="10" HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Image VerticalOptions="Center" HorizontalOptions="Start" Aspect="AspectFit" Source="ic_thumb_down.png"/>
+                    <Slider Margin="10,0" Minimum="0" Maximum="10" Value="{Binding FeelingValue}" HorizontalOptions="FillAndExpand" />
+                    <Image VerticalOptions="Center" HorizontalOptions="End" Aspect="AspectFit" Source="ic_thumb_up.png"/>
+                </StackLayout>
+
+                <!--spolulezec-->
+                <Label Margin="10,10,10,0" Text="{extensions:Translate AddDiaryPage_Partner}" Style="{StaticResource TitleLabelStyle}" />
+                <Entry Margin="10,0" Text="{Binding PartnerTextInput, Mode=TwoWay}" HorizontalOptions="FillAndExpand" Completed="Entry_Completed" />
+
+                <!--poznámka-->
+                <Label Margin="10,10,10,0" Text="{extensions:Translate AddDiaryPage_Note}" Style="{StaticResource TitleLabelStyle}" />
+                <tools:ExpandableEditor x:Name="NoteEditor" Margin="10,0" Text="{Binding NoteTextInput, Mode=TwoWay}" HorizontalOptions="FillAndExpand" />
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{extensions:Translate Save}" Icon="ic_save.png" Order="Primary" Clicked="Save_Clicked"/>
+    </ContentPage.ToolbarItems>
+</ContentPage>

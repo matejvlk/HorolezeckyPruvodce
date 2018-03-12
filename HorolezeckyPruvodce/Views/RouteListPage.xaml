@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             xmlns:viewModels="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.ViewModels;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.RouteListPage"
+             Title="{extensions:Translate RouteListPage_Title}">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Spacing="0">
+
+        <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Padding="0">
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Spacing="0">
+                <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource IconsColor}" HeightRequest="{StaticResource SeparatorHeight}" />
+                <StackLayout Spacing="0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryColor}">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ExpandIcon_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" Margin="15,10" HorizontalOptions="StartAndExpand" VerticalOptions="Center" >
+                        <Label Text="{Binding SectorName}" FontSize="{StaticResource ListFontSize}" TextColor="{StaticResource IconsColor}"/>
+                    </StackLayout>
+                    <Image Margin="15,10" x:Name="ExpandIcon" VerticalOptions="Center" HorizontalOptions="End" Aspect="AspectFit" Source="ic_expand_more.png"/>
+                </StackLayout>
+                <StackLayout x:Name="DetailLayout" Padding="10" HorizontalOptions="FillAndExpand" IsVisible="{Binding Expanded}">
+                    <StackLayout x:Name="ImagesLayout" Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill"/>
+                    <Label Text="{Binding SectorDescription}" />
+                </StackLayout>
+                <BoxView HorizontalOptions="FillAndExpand" BackgroundColor="{StaticResource PrimaryColor}" HeightRequest="{StaticResource SeparatorHeight}" />
+            </StackLayout>
+        </ScrollView>
+
+
+        <ListView x:Name="RouteListView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HasUnevenRows="True" SeparatorColor="{StaticResource PrimaryColor}" ItemsSource="{Binding Routes}" ItemSelected="Route_ItemSelected" ItemTapped="ListView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal" Padding="15">
+                            <Label Text="{Binding Name}" VerticalOptions="Center" HorizontalOptions="StartAndExpand" FontSize="{StaticResource ListFontSize}" TextColor="{StaticResource PrimaryColor}" />
+                            <Image VerticalOptions="Center" HorizontalOptions="End" Aspect="AspectFit" Source="ic_arrow_right.png"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>

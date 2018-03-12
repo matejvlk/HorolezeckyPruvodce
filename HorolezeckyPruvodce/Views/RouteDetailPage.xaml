@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             xmlns:tools="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Tools;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.RouteDetailPage"
+             Title="{Binding Title}">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label" x:Key="DataLabelStyle">
+                <Setter Property="HorizontalOptions" Value="Start"/>
+                <Setter Property="Margin" Value="0,14,10,4"/>
+                <Setter Property="TextColor" Value="{StaticResource PrimaryDarkColor}"/>
+                <Setter Property="LineBreakMode" Value="WordWrap"/>
+            </Style>
+            <Style TargetType="Label" x:Key="TitleLabelStyle" BasedOn="{StaticResource DataLabelStyle}">
+                <Setter Property="FontAttributes" Value="Bold"/>
+                <Setter Property="Margin" Value="10,14,10,4"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView HorizontalOptions="FillAndExpand" Margin="0,0,0,0">
+        <StackLayout Padding="10">
+            <Label Text="{Binding Title}" TextColor="{StaticResource PrimaryColor}" FontSize="17" FontAttributes="Bold" Margin="10,0" HorizontalTextAlignment="Start" HorizontalOptions="FillAndExpand"/>
+            <Grid Margin="0" Padding="0" RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="1"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Label Text="{extensions:Translate RouteDetailPage_Grade}" Grid.Row="0" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label Text="{Binding Grade}" Grid.Row="0" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label Text="{extensions:Translate RouteDetailPage_GradingSystem}" Grid.Row="1" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label Text="{Binding GradingSystem}" Grid.Row="1" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label Text="{extensions:Translate RouteDetailPage_Author}" Grid.Row="2" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label Text="{Binding Author}" Grid.Row="2" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label Text="{extensions:Translate RouteDetailPage_Sector}" Grid.Row="3" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label Text="{Binding SectorName}" Grid.Row="3" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <BoxView Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" HeightRequest="{StaticResource SeparatorHeight}" Color="{StaticResource PrimaryColor}" Margin="0,0,0,0"/>
+
+                <Label IsVisible="{Binding Type, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Type}" Grid.Row="5" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Type, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Type}" Grid.Row="5" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding RockType, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_RockType}" Grid.Row="6" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding RockType, Converter={tools:NullToVisibilityConverter}}" Text="{Binding RockType}" Grid.Row="6" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding Difficulties, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Difficulties}" Grid.Row="7" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Difficulties, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Difficulties}" Grid.Row="7" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding Angle, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Angle}" Grid.Row="8" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Angle, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Angle}" Grid.Row="8" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding Length, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Length}" Grid.Row="9" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Length, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Length}" Grid.Row="9" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding Protection, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Protection}" Grid.Row="10" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Protection, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Protection}" Grid.Row="10" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding Description, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Description}" Grid.Row="11" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Description, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Description}" Grid.Row="11" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+
+                <Label IsVisible="{Binding Note, Converter={tools:NullToVisibilityConverter}}" Text="{extensions:Translate RouteDetailPage_Note}" Grid.Row="12" Grid.Column="0" Style="{StaticResource TitleLabelStyle}"/>
+                <Label IsVisible="{Binding Note, Converter={tools:NullToVisibilityConverter}}" Text="{Binding Note}" Grid.Row="12" Grid.Column="1" Style="{StaticResource DataLabelStyle}"/>
+            </Grid>
+            <StackLayout x:Name="ImagesLayout" Spacing="10" HorizontalOptions="FillAndExpand" VerticalOptions="Fill"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

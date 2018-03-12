@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pageExtensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Views.PageExtensions;assembly=HorolezeckyPruvodce"
+             xmlns:viewModels="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.ViewModels;assembly=HorolezeckyPruvodce"
+             xmlns:extensions="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Extensions;assembly=HorolezeckyPruvodce"
+             xmlns:tools="clr-namespace:UHK.MatejVlk.HorolezeckyPruvodce.Tools;assembly=HorolezeckyPruvodce"
+             x:Class="UHK.MatejVlk.HorolezeckyPruvodce.Views.HomePage">
+
+    <ContentPage.BindingContext>
+        <viewModels:HomeViewModel/>
+    </ContentPage.BindingContext>
+
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+            <Image Margin="0,50,0,0" Aspect="AspectFit" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Source="logo.png"/>
+            <Label Margin="15" HorizontalOptions="FillAndExpand" VerticalOptions="Center" HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Title}" TextColor="{StaticResource PrimaryDarkColor}" FontAttributes="Bold" FontSize="22"/>
+
+            <Grid Margin="20,40,20,20" Padding="0" x:Name="TilesGrid" RowSpacing="20" ColumnSpacing="20" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="90"/>
+                    <RowDefinition Height="90"/>
+                </Grid.RowDefinitions>
+
+                <tools:ContentButton Grid.Row="0" Grid.Column="0" BackgroundColor="{StaticResource PrimaryColor}">
+                    <tools:ContentButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Guide_Tapped"/>
+                    </tools:ContentButton.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image VerticalOptions="Center" Aspect="AspectFit" Source="ic_guide.png"/>
+                        <Label HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Guide}" TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                    </StackLayout>
+                </tools:ContentButton>
+
+                <tools:ContentButton Grid.Row="0" Grid.Column="1" BackgroundColor="{StaticResource PrimaryColor}">
+                    <tools:ContentButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Search_Tapped"/>
+                    </tools:ContentButton.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Aspect="AspectFit" Source="ic_search.png"/>
+                        <Label HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Search}" TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                    </StackLayout>
+                </tools:ContentButton>
+
+                <tools:ContentButton Grid.Row="1" Grid.Column="0" BackgroundColor="{StaticResource PrimaryColor}">
+                    <tools:ContentButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="Account_Tapped"/>
+                    </tools:ContentButton.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Aspect="AspectFit" Source="ic_person.png"/>
+                        <Label HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_Account}" TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                    </StackLayout>
+                </tools:ContentButton>
+
+                <tools:ContentButton Grid.Row="1" Grid.Column="1" BackgroundColor="{StaticResource PrimaryColor}">
+                    <tools:ContentButton.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AboutApp_Tapped"/>
+                    </tools:ContentButton.GestureRecognizers>
+                    <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+                        <Image Aspect="AspectFit" Source="ic_info.png"/>
+                        <Label HorizontalTextAlignment="Center" Text="{extensions:Translate HomePage_AboutApp}" TextColor="White" FontAttributes="Bold" FontSize="17"/>
+                    </StackLayout>
+                </tools:ContentButton>
+            </Grid>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
