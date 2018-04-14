@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.13
+VisualStudioVersion = 15.0.27130.2020
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorolezeckyPruvodce", "HorolezeckyPruvodce\HorolezeckyPruvodce.csproj", "{17838043-B375-4A00-B59C-5E8D562B1CE5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorolezeckyPruvodce.Droid", "HorolezeckyPruvodce.Droid\HorolezeckyPruvodce.Droid.csproj", "{49DF9912-37FF-41E2-8FA8-E0F02557D185}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HorolezeckyPruvodce.iOS", "HorolezeckyPruvodce.iOS\HorolezeckyPruvodce.iOS.csproj", "{84ADAB82-06B3-4E30-A896-1897DEA1822E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -155,8 +157,43 @@ Global
 		{49DF9912-37FF-41E2-8FA8-E0F02557D185}.Release|x86.ActiveCfg = Release|Any CPU
 		{49DF9912-37FF-41E2-8FA8-E0F02557D185}.Release|x86.Build.0 = Release|Any CPU
 		{49DF9912-37FF-41E2-8FA8-E0F02557D185}.Release|x86.Deploy.0 = Release|Any CPU
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|Any CPU.ActiveCfg = Ad-Hoc|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|ARM.ActiveCfg = Ad-Hoc|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|iPhoneSimulator.ActiveCfg = Ad-Hoc|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|iPhoneSimulator.Build.0 = Ad-Hoc|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|x64.ActiveCfg = Ad-Hoc|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Ad-Hoc|x86.ActiveCfg = Ad-Hoc|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|Any CPU.ActiveCfg = AppStore|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|ARM.ActiveCfg = AppStore|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|iPhone.Build.0 = AppStore|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|iPhoneSimulator.ActiveCfg = AppStore|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|iPhoneSimulator.Build.0 = AppStore|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|x64.ActiveCfg = AppStore|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.AppStore|x86.ActiveCfg = AppStore|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|Any CPU.ActiveCfg = Debug|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|ARM.ActiveCfg = Debug|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|iPhone.ActiveCfg = Debug|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|iPhone.Build.0 = Debug|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|x64.ActiveCfg = Debug|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Debug|x86.ActiveCfg = Debug|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|Any CPU.ActiveCfg = Release|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|ARM.ActiveCfg = Release|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|iPhone.ActiveCfg = Release|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|iPhone.Build.0 = Release|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|x64.ActiveCfg = Release|iPhone
+		{84ADAB82-06B3-4E30-A896-1897DEA1822E}.Release|x86.ActiveCfg = Release|iPhone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CF71D3D5-DAEE-4128-8F8D-A5E69246D2C6}
 	EndGlobalSection
 EndGlobal
