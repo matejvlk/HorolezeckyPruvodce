@@ -17,7 +17,7 @@ namespace UHK.MatejVlk.HorolezeckyPruvodce.Extensions
 
         public TranslateExtension()
         {
-            if (Device.OS == TargetPlatform.iOS || Device.OS == TargetPlatform.Android)
+            if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
             {
                 ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
             }
