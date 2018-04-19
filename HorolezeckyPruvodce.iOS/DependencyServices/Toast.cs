@@ -6,9 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Foundation;
 using UHK.MatejVlk.HorolezeckyPruvodce.DependencyServices;
+using UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices;
 using UIKit;
 
-[assembly: Dependency(typeof(UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices.Toast))]
+[assembly: Xamarin.Forms.Dependency(typeof(Toast))]
 namespace UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices
 {
     public class Toast : IToast

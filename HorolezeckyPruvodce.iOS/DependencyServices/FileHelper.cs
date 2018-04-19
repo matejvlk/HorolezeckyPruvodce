@@ -10,7 +10,7 @@ using UHK.MatejVlk.HorolezeckyPruvodce.Backend.DataAccess.Database.Interfaces;
 using UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices;
 using UIKit;
 
-[assembly:Dependency(typeof(FileHelper))]
+[assembly: Xamarin.Forms.Dependency(typeof(FileHelper))]
 namespace UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices
 {
     public class FileHelper : IFileHelper

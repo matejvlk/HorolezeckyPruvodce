@@ -6,9 +6,10 @@ using System.Text;
 
 using Foundation;
 using UHK.MatejVlk.HorolezeckyPruvodce.DependencyServices;
+using UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices;
 using UIKit;
 
-[assembly: Dependency(typeof(UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices.Dialogs))]
+[assembly: Xamarin.Forms.Dependency(typeof(Dialogs))]
 namespace UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices
 {
     public class Dialogs : IDialogs

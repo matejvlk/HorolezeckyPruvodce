@@ -11,7 +11,7 @@ using UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices;
 using UHK.MatejVlk.HorolezeckyPruvodce.Interfaces;
 using UIKit;
 
-[assembly:Dependency(typeof(Localize))]
+[assembly: Xamarin.Forms.Dependency(typeof(Localize))]
 namespace UHK.MatejVlk.HorolezeckyPruvodce.iOS.DependencyServices
 {
     public class Localize : ILocalize
