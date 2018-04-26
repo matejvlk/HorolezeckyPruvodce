@@ -102,6 +102,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
+    <BundleResource Include="HorolezeckyPruvodce.sqlite" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
     </None>
@@ -129,6 +130,12 @@
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="PCLStorage, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.dll</HintPath>
+    </Reference>
+    <Reference Include="PCLStorage.Abstractions, Version=1.0.2.0, Culture=neutral, PublicKeyToken=286fe515a2c35b64, processorArchitecture=MSIL">
+      <HintPath>..\packages\PCLStorage.1.0.2\lib\portable-Xamarin.iOS+Xamarin.Mac\PCLStorage.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="SQLite-net">
       <HintPath>..\packages\sqlite-net-pcl.1.4.118\lib\netstandard1.1\SQLite-net.dll</HintPath>
       <Private>True</Private>
@@ -309,6 +316,237 @@
       <Project>{17838043-b375-4a00-b59c-5e8d562b1ce5}</Project>
       <Name>HorolezeckyPruvodce</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\cisarskeudoli.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\jizerskehory.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_cvicna.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_cvicna_nahornihrana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_cvicna_nc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_cvicna_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_dvojskok.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_kroupovacesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_nc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_potnicesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_prepadovacesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_rozporovacesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_severniprava.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_skubanky.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_strananaspadnuti.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_dvojce_vzdusnavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_kauschkuvzlab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_levavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_parlamentspi.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_pianovavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_previslavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_primazapadnicesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_staracesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_gahlerovavez_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_brizovacesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_dolnisparovavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_dolnisparovavarianta2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_hrebenovka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_jasnahrana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_klasickacesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_lomenaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_nc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_nc2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_samavoda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_sikmaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_sparovavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_sparovavarianta2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_stinovaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_velkavoda.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_liberecka_zapadnilevaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_malasmrtka_jiznikomin.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_malasmrtka_skromnacesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_malasmrtka_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_malasmrtka_vecernicesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_mapa_mala.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_mapa_velka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_prijezd.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_severnihrana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_staracesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_staracesta2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_zapadnilevaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_zapadnipravaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_sokol_zapadnipravaspara2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_jihozapadnihrana.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_kristininaspara.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_nc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_severnicesta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_trhlinovavarianta.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_vychodniprava.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_vychodnistredni.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka_zapadnistredni.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_velkasmrtka2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_zub.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_zub_dentalniorgie.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_zub_topo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\obr_zub_variantanc.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\palicnik.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="images\vezgralu.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

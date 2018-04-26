@@ -14,7 +14,8 @@ namespace UHK.MatejVlk.HorolezeckyPruvodce.iOS
             }
             catch (Exception ex)
             {
-                
+                //pro odchycení exception v debug módu
+                var x = ex;
             }
         }
     }

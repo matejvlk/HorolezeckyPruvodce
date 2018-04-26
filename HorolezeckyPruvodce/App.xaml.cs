@@ -23,7 +23,7 @@ namespace UHK.MatejVlk.HorolezeckyPruvodce
         {
             InitializeComponent();
 
-            if (Device.OS == TargetPlatform.iOS || Device.OS == TargetPlatform.Android)
+            if (Device.RuntimePlatform == Device.iOS || Device.RuntimePlatform == Device.Android)
             {
                 var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
                 AppResources.Culture = ci; // set the RESX for resource localization
