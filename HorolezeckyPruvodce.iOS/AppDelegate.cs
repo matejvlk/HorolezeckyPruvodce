@@ -63,10 +63,10 @@ namespace UHK.MatejVlk.HorolezeckyPruvodce.iOS
             string imagesFolderName = "images";
             string iOSPath = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
             string completeiOSPath = Path.Combine(iOSPath, imagesFolderName); // FILE NAME TO USE WHEN COPIED
-            Directory.CreateDirectory(completeiOSPath);
-
-            if (!System.IO.File.Exists(completeiOSPath))
+            
+            if (!System.IO.Directory.Exists(completeiOSPath))
             {
+                Directory.CreateDirectory(completeiOSPath);
                 //překopírování obrázků z root složky iOS projektu (součást instalačního balíčku) do "pracovní" složky iOSu
                 string[] imageNames = Directory.GetFiles(imagesFolderName);
 
