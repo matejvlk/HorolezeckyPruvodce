@@ -8,7 +8,35 @@
         <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
             <Label Margin="10,30,10,0" HorizontalOptions="FillAndExpand" VerticalOptions="Fill" Text="{extensions:Translate SearchPage_Info}"/>
             <Entry Margin="10,0" Placeholder="{extensions:Translate SearchPage_Name}" Text="{Binding SearchTextInput, Mode=TwoWay}" HorizontalOptions="FillAndExpand" />
-            <Button TextColor="White" BackgroundColor="{StaticResource PrimaryColor}" Text="{extensions:Translate SearchPage_Search}" HorizontalOptions="Center" Command="{Binding SearchCommand}" />
+            <Button TextColor="White" BackgroundColor="{StaticResource PrimaryColor}" Text="{extensions:Translate SearchPage_Search}" HorizontalOptions="Center" Command="{Binding SearchCommand}">
+                <Button.WidthRequest>
+                    <OnPlatform x:TypeArguments="x:Double">
+                        <On Platform="iOS" Value="60"/>
+                    </OnPlatform>
+                    
+                    <!--případně složitější zápis-->
+                    <!--<OnPlatform x:TypeArguments="Thickness">
+                        <OnPlatform.Platforms>
+                            <On Platform="iOS" >
+                                <On.Value>
+                                    <Thickness Left="2"
+                                               Top="23"
+                                               Right="2"
+                                               Bottom="2"/>
+                                </On.Value>
+                            </On>
+                            <On Platform="Android">
+                                <On.Value>
+                                    <Thickness Left="0"
+                                               Top="30"
+                                               Right="0"
+                                               Bottom="0"/>
+                                </On.Value>
+                            </On>
+                        </OnPlatform.Platforms>
+                    </OnPlatform>-->
+                </Button.WidthRequest>
+            </Button>
             <StackLayout x:Name="FoundItemsStackLayout" Spacing="0"/>
         </StackLayout>
     </ScrollView>
